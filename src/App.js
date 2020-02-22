@@ -1,15 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import Person from './Person/Person';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My React</h1>
-      <Person/>
-    </div>
-  );
+class App extends Component {
+  state = {
+    persons: [
+        { name: 'Jacob', age:10},
+        { name: 'Anglea', age:10}
+    ]
+  };
+
+  render() {
+    return (
+        <div className="App">
+          <h1>My React</h1>
+          <Person name={this.state.persons[0].name}/>
+          <Person name={this.state.persons[1].name}/>
+        </div>
+    )
+  }
+
 }
 
 export default App;
