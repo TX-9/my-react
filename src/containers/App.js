@@ -28,6 +28,15 @@ class App extends Component {
         console.log('App.js-componentDidMount');
     }
 
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        console.log('App.js-componentDidUpdate');
+        return true;
+    }
+
+    componentDidUpdate() {
+        console.log('App.js-componentDidUpdate');
+    }
+
     deleteNameHandler = (personIdx) => {
        // const persons = this.state.persons.slice();
         const persons = [...this.state.persons];
