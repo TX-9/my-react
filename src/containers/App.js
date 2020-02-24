@@ -28,9 +28,10 @@ class App extends Component {
         console.log('App.js-componentDidMount');
     }
 
+    // performance optimization
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         console.log('App.js-componentDidUpdate');
-        return true;
+        return true; //re-render every time
     }
 
     componentDidUpdate() {
